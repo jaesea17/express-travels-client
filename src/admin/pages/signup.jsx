@@ -13,7 +13,7 @@ const styles = {
   backgroundSize: "cover",
 };
 
-const signup = () => {
+const Signup = () => {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -53,8 +53,8 @@ const signup = () => {
         console.log(err.response.data.message);
         // swal("Oops!", err.response.data.message, "info");
         if (err.response.data.message == "record not found") {
-                  setRecValue(newValue);
-                  setShowImage(true);
+          setRecValue(newValue);
+          setShowImage(true);
         }
         // return err.response.data.message;
       });
@@ -205,4 +205,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default Signup;
